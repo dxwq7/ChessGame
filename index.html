@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(8, 4, 29);
+        padding: 0px;
+        margin: 0px;
+
+        overflow-x: hidden;
+    }
+
+    h2 {
+        padding-left: 10px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        font-size: 32px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .card1 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card2 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card3 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card4 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card5 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card6 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card7 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .card8 {
+        background: #1c3ba0;
+        border: 1px solid #121829;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .featured {
+    border: 2px solid #00e5ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+
+.card1.featured:hover {
+    transform: scale(1.10);
+}
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6,
+    .card7,
+    .card8 {
+        width: 350px;
+    }
+
+    .card1:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card2:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card3:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card4:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card5:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card6:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card7:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card8:hover {
+        transform: scale(1.04);
+        border-color: #00e5ff;
+    }
+
+    .card1 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card2 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card3 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card4 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card5 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card6 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card7 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .card8 img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .content {
+        padding: 20px
+    }
+
+    .header {
+        width: 100%;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(22, 10, 82);
+        color: aqua;
+        padding: 0 20px;
+        border-bottom: 1px solid rgb(66, 29, 167);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .name {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    .nav {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn1,
+    .btn2,
+    .btn3 {
+        background-color: rgb(19, 3, 44);
+        border: 1px solid rgb(66, 29, 167);
+        font-size: 16px;
+        color: aqua;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 30px;
+        padding: 10px 16px;
+        cursor: pointer;
+    }
+
+    .btn1:hover,
+    .btn2:hover,
+    .btn3:hover {
+        background: #232e4e;
+    }
+
+    @media (max-width: 700px) {
+        .header {
+            flex-direction: column;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn1,
+        .btn2,
+        .btn3 {
+            font-size: 14px;
+        }
+
+        .page-content {
+            padding-top: 130px;
+        }
+    }
+
+    .hero {
+        width: 100%;
+
+        background-image: url("images/thumb.jpg");
+        background-size: cover;
+        background-position: center;
+
+        text-align: center;
+        color: white;
+
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: darken;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        margin: 0;
+        color: #00e5ff;
+    }
+
+    .hero p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-content: space-between; 
+}
+.card1 {
+    flex-grow: 1;
+    max-width: 450px;
+}
+.platform-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.new-game {
+    align-self: flex-start;
+    border: 2px solid #00e5ff;
+}
+
+    .label {
+        font-size: 11px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        color: #8fa0c4
+    }
+
+    .tag {
+        color: #8fa0c4;
+        font-size: 12px;
+        margin-bottom: 10px
+    }
+
+    .price {
+        color: #00e5ff;
+        font-weight: bold;
+        font-size: 18px
+    }
+
+    table {
+        width: 100%;
+        max-width: 900px;
+        margin: 40px auto;
+        border-collapse: collapse;
+        background: #01e1ff;
+        border-radius: 10px;
+        overflow: hidden;
+        table-layout: fixed;
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    th,
+    td {
+        padding: 15px;
+        border-bottom: 1px solid #142d74;
+        text-align: left;
+        border-right: 1px solid #142d74;
+    }
+
+    th {
+        color: #00e5ff;
+        border-bottom: 1px solid #142d74;
+        background: #121829;
+        border-right: 1px solid #142d74;
+    }
+
+    td:hover {
+        color: #00e5ff;
+        background: #232e4e;
+    }
+
+    .page-content {
+        padding-top: 50px;
+    }
+
+    h2 span {
+        color: #00e5ff;
+    }
+
+    .support {
+        width: 350px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        background: #060d25;
+        border: 1px solid #121829;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .support:hover {
+        transform: scale(1.03);
+        border-color: #00e5ff;
+    }
+
+    .support h5 {
+        color: #00e5ff;
+        font-size: 26px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .support p {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        color: #8fa0c4;
+        font-size: 14px;
+    }
+
+    .footer {
+        margin-top: 15px;
+        font-size: 12px;
+        color: gray;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    html {
+        scroll-padding-top: 95px;
+        /* Adjusted to perfectly clear your fixed header height */
+    }
+</style>
+
+<body>
+
+
+    <div class="header">
+        <p class="name">GAMEZONE</p>
+
+        <div class="nav">
+            <button class="btn1" id="btn-games">GAMES</button>
+            <button class="btn2" id="btn-support-prices">SUPPORT/PRICES</button>
+            <button class="btn3" id="btn-home">HOME</button>
+        </div>
+    </div>
+
+    <div class="page-content">
+
+        <div class="hero">
+            <h1>GAMEZONE</h1>
+            <p>A place for every gamer</p>
+        </div>
+        <br>
+        <h2 id="games">Our <span>Games</span></h2>
+        <br>
+        <div class="games">
+<div class="card1 featured">
+    <img src="images/rl.jpg">
+    <div class="content">
+        <p class="label">★ TOPSELLER</p>
+        <h3>Rocket League</h3>
+        <p class="tag">Epic Games / Console / PC</p>
+        <p>High-skill competitive car soccer.</p>
+        <p class="price">Free</p>
+    </div>
+</div>
+
+            <div class="card2">
+                <img src="images/fn.jpg">
+                <div class="content">
+                    <p class="label">BATTLE ROYALE</p>
+                    <h3>Fortnite</h3>
+                    <p class="tag">Epic Games / PC / Console / Mobile</p>
+                    <p>Popular Battle Royale with building.</p>
+                    <p class="price">Free</p>
+                </div>
+            </div>
+
+            <div class="card3">
+                <img src="images/Val.jpg">
+                <div class="content">
+                    <p class="label">COMPETITIVE</p>
+                    <h3>Valorant</h3>
+                    <p class="tag">Riot Client / PC</p>
+                    <p>5v5 tactical hero shooter.</p>
+                    <p class="price">Free</p>
+                </div>
+            </div>
+
+            <div class="card4">
+                <img src="images/mc.jpg">
+                <div class="content">
+                    <p class="label">SANDBOX</p>
+                    <h3>Minecraft</h3>
+                    <p class="tag">Minecraft Launcher / Console / Mobile</p>
+                    <p>Endless open-world building game.</p>
+                    <p class="price">29.99€</p>
+                </div>
+            </div>
+
+            <div class="card5">
+                <img src="images/cs2.jpg">
+                <div class="content">
+                    <p class="label">SHOOTER</p>
+                    <h3>Counter-Strike 2</h3>
+                    <p class="tag">Steam / PC</p>
+                    <p>Classic tactical team shooter.</p>
+                    <p class="price">Free</p>
+                </div>
+            </div>
+
+            <div class="card6">
+                <img src="images/gtaV.jpg">
+                <div class="content">
+                    <p class="label">OPEN WORLD</p>
+                    <h3>GTA V</h3>
+                    <p class="tag">Steam / Epic Games / Rockstar Launcher</p>
+                    <p>Massive open-world crime epic.</p>
+                    <p class="price">29.99€</p>
+                </div>
+            </div>
+
+            <div class="card7">
+                <img src="images/apex.jpg">
+                <div class="content">
+                    <p class="label">BATTLE ROYALE</p>
+                    <h3>Apex Legends</h3>
+                    <p class="tag">Steam / EA App / Console</p>
+                    <p>Fast-paced hero-based combat.</p>
+                    <p class="price">Free</p>
+                </div>
+            </div>
+
+            <div class="card8">
+                <img src="images/COD.jpg">
+                <div class="content">
+                    <p class="label">SHOOTER</p>
+                    <h3>Call of Duty: Warzone</h3>
+                    <p class="tag">Battle.net / Steam / Console</p>
+                    <p>Large-scale realistic battle royale.</p>
+                    <p class="price">Free</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <br>
+    <h2 id="prices">Prices</h2>
+    <div>
+        <table>
+            <tr>
+                <th>Game</th>
+                <th>Platform</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>Rocket League</td>
+                <td>Epic Games / Console / PC</td>
+                <td>Free</td>
+            </tr>
+
+            <tr>
+                <td>Fortnite</td>
+                <td>Epic Games / PC / Console / Mobile</td>
+                <td>Free</td>
+            </tr>
+
+            <tr>
+                <td>Valorant</td>
+                <td>Riot Client / PC</td>
+                <td>Free</td>
+            </tr>
+
+            <tr>
+                <td>Minecraft</td>
+                <td>Minecraft Launcher / Console / Mobile</td>
+                <td>29.99€</td>
+            </tr>
+
+            <tr>
+                <td>Counter-Strike 2</td>
+                <td>Steam / PC</td>
+                <td>Free</td>
+            </tr>
+
+            <tr>
+                <td>GTA V</td>
+                <td>Steam / Epic Games / Rockstar Launcher</td>
+                <td>29.99€</td>
+            </tr>
+
+            <tr>
+                <td>Apex Legends</td>
+                <td>Steam / EA App / Console</td>
+                <td>Free</td>
+            </tr>
+
+            <tr>
+                <td>Call of Duty: Warzone</td>
+                <td>Battle.net / Steam / Console</td>
+                <td>Free</td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="support" class="support">
+        <h5>Support</h5>
+
+        <p>Email: support@gamezone.com</p>
+        <p>Phone: +43 123 456 789</p>
+
+
+    </div>
+    <p class="footer">© 2026 GameZone</p>
+
+    <script>
+        document.getElementById("btn-home").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        document.getElementById("btn-games").addEventListener("click", function () {
+            document.getElementById("games").scrollIntoView({ behavior: "smooth" });
+        });
+
+        document.getElementById("btn-support-prices").addEventListener("click", function () {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        });
+    </script>
+</body>
+
+</html>
